@@ -11209,6 +11209,9 @@ a.btn {
   .hero {
     min-height: 100vh;
   }
+  .hero .hero-right {
+    display: none;
+  }
   #donde {
     margin-bottom: 0;
   }

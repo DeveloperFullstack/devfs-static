@@ -343,6 +343,9 @@ $logos-height-control: 840px;
   h6, .h6 { font-size: .85rem; }
   .hero {
     min-height: 100vh;
+    .hero-right {
+      display: none;
+    }
   }
   #donde {
     margin-bottom: 0;
