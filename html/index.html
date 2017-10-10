@@ -6,11 +6,14 @@
       <div class="col-sm-6 hero-left">
         <h1>Emprendedores que programan</h1>
         <h2>Aprende a programar tus ideas de negocio en un curso presencial de 3 meses en la ciudad de Guatemala.</h2>
-        <p>Cupo limitado a 8 alumnos | Comienza el 1º de Noviembre del 2017</p>
+        <p>Cupo limitado a 8 alumnos | Comienza el 14 de Noviembre del 2017</p>
         <div class="row">
           <div class="col-sm-6">
             <nav>
-              <a href="https://gus1.typeform.com/to/LZY3Gb" class="btn btn-primary btn-lg btn-block">Aplicar</a>
+              <a href="https://gus1.typeform.com/to/LZY3Gb"
+                onclick="return initiateCheckout(this)"
+                data-location="hero"
+                class="btn btn-primary btn-lg btn-block">Aplicar</a>
             </nav>
           </div>
         </div>
@@ -36,7 +39,7 @@
       <div class="row when-row">
         <div class="col-sm-4">
           <h2 class="title">¿Dónde?</h2>
-          <h3>Chamba Coworking</h3>
+          <h3>Chamba<br>Coworking</h3>
           <address class="h4">
             Vía 5 1-29 Zona 4
             <br>Guatemala City, Guatemala
@@ -44,19 +47,22 @@
         </div>
         <div class="col-sm-4">
           <h2 class="title">¿Cuándo?</h2>
-          <h3>Del 1º de Noviembre 2017 al 15 de Febrero 2018</h3>
-          <h4>Los Martes y Jueves de cada semana, de 4pm a 7pm</h4>
+          <h3>Del 14 de Noviembre al<br>27 de Febrero 2018</h3>
+          <h4>Martes y Jueves de 4pm a 7pm</h4>
         </div>
         <div class="col-sm-4">
           <h2 class="title">¿Cuánto?</h2>
-          <h3>3 pagos mensuales de Q.715.00 IVA incluido</h3>
+          <h3>3 pagos mensuales de Q.715.00 incluye IVA</h3>
           <h4>Incluye costos de servidores, dominios y bases de datos</h4>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
           <nav>
-            <a href="https://gus1.typeform.com/to/LZY3Gb" class="btn btn-light btn-lg btn-block">Aplicar</a>
+            <a href="https://gus1.typeform.com/to/LZY3Gb"
+              onclick="return initiateCheckout(this)"
+              data-location="donde"
+              class="btn btn-light btn-lg btn-block">Aplicar</a>
           </nav>
         </div>
       </div>
@@ -64,13 +70,13 @@
   </div>
 </section>
 
-<section class="section" id="programa">
+<section class="section programa" id="programa">
   <div class="section-header">
     <div class="container">
       <h2>Programa</h2>
       <div class="row">
         <div class="col-sm-9">
-          <h3>Al final del programa habrás desplegado tu idea de negocio en internet con una arquitectura de software sólida utilizando PHP 7, MySQL, Docker, Git y tecnologías de frontend.</h3>
+          <h3>Al final del programa habrás desplegado una idea de negocio en internet con una arquitectura de software sólida utilizando PHP 7, MySQL, Docker, Git y tecnologías de frontend.</h3>
         </div>
       </div>
     </div>
@@ -81,10 +87,83 @@
         <article class="grid-list-item schedule-card">
           <div>
             <nav class="cta-nav">
-              <a href="https://gus1.typeform.com/to/LZY3Gb" class="btn btn-primary btn-block btn-lg">Aplicar al programa</a>
+              <a href="https://gus1.typeform.com/to/LZY3Gb"
+                onclick="return initiateCheckout(this)"
+                data-location="programa"
+                class="btn btn-primary btn-block btn-lg">Aplicar al programa</a>
             </nav>
           </div>
         </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="metodologia">
+  <div class="section-header">
+    <div class="container">
+      <h2>Metodología</h2>
+      <div class="row">
+        <div class="col-sm-9">
+          <h3>DeveloperFullstack te prepara para ser un IT project manager</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <article class="__icon-wrapper">
+            <div class="svg">
+              @@include('svg/thinking-idea.svg')
+            </div>
+            <h5>El equipo decide qué idea de negocio implementar</h5>
+          </article>
+        </div>
+        <div class="col-sm-1 arrow-wrapper">
+          <i class="icon-chevron-right"></i>
+        </div>
+        <div class="col-sm-3">
+          <article class="__icon-wrapper">
+            <div class="svg">
+              @@include('svg/thinking-piece.svg')
+            </div>
+            <h5>Cada miembro del equipo es una pieza fundamental del proyecto</h5>
+          </article>
+        </div>
+        <div class="col-sm-1 arrow-wrapper">
+          <i class="icon-chevron-right"></i>
+        </div>
+        <div class="col-sm-3">
+          <article class="__icon-wrapper">
+            <div class="svg">
+              @@include('svg/thinking-deploy.svg')
+            </div>
+            <h5>Trabajamos con integración contínua usando Git, Docker y Jenkins</h5>
+          </article>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <article class="__icon-wrapper">
+            <div class="svg">
+              @@include('svg/thinking-measure.svg')
+            </div>
+            <h5>Todo está en constante medición; desechamos lo que no sirve</h5>
+          </article>
+        </div>
+        <div class="col-sm-1 arrow-wrapper">
+          <i class="icon-chevron-right"></i>
+        </div>
+        <div class="col-sm-3">
+          <article class="__icon-wrapper">
+            <div class="svg">
+              @@include('svg/thinking-infinite.svg')
+            </div>
+            <h5>Repetimos el ciclo, logrando siempre mejores métricas</h5>
+          </article>
+        </div>
       </div>
     </div>
   </div>
@@ -120,7 +199,10 @@
           <h2>¿Listo para cambiar <br>el rumbo de tu carrera?</h2>
           <div class="row">
             <div class="col-sm-4">
-              <a href="https://gus1.typeform.com/to/LZY3Gb" class="btn btn-primary btn-lg btn-block">Aplicar ahora</a>
+              <a href="https://gus1.typeform.com/to/LZY3Gb"
+                onclick="return initiateCheckout(this)"
+                data-location="footer"
+                class="btn btn-primary btn-lg btn-block">Aplicar ahora</a>
             </div>
           </div>
         </div>

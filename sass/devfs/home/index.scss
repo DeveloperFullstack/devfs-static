@@ -152,7 +152,8 @@ a.btn {
   }
 }
 
-#programa {
+.programa {
+  margin-bottom: get-spacer(5);
   position: relative;
   z-index: 20;
   .section-header {
@@ -163,6 +164,41 @@ a.btn {
   }
   .section-content {
     padding: get-spacer(3) 0;
+  }
+}
+
+#metodologia {
+  @extends .programa;
+  z-index: 20;
+  .section-content {
+    padding: get-spacer(5) 0;
+    min-height: 80vh;
+  }
+  .section-header {
+    h2 {
+      @include alt-book;
+    }
+  }
+  .__icon-wrapper {
+    .svg {
+      @include flex-column-center;
+      @include flex-align-center;
+      height: 210px;
+      svg {
+        width: 112px;
+      }
+    }
+    h5 {
+      text-align: center;
+    }
+  }
+  .arrow-wrapper {
+    @include flex-column-center;
+    text-align: center;
+    i {
+      font-size: $h3-font-size;
+      color: $blue;
+    }
   }
 }
 
@@ -312,6 +348,16 @@ $logos-height-control: 840px;
     margin-bottom: 0;
     .title {
       margin-bottom: get-spacer(3);
+    }
+  }
+  #metodologia {
+    .arrow-wrapper {
+      padding: get-spacer(3) 0;
+      i {
+        &:before {
+          content: '\e93a';
+        }
+      }
     }
   }
 }
