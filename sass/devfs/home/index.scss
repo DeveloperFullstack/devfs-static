@@ -70,12 +70,16 @@
 }
 
 .header {
+  @include position(absolute, 0 0 null 0);
+  background-color: transparent;
   margin-bottom: get-spacer(5);
   border-bottom: none;
+  z-index: 100;
+  width: 100%;
   .logo {
     text-decoration: none;
-    line-height: 21px;
-    font-size: 21px;
+    line-height: 28px;
+    font-size: 28px;
     .developer {
       @include book;
     }
@@ -92,10 +96,23 @@
 }
 
 .hero {
-  min-height: 70vh;
   h1 {
     @include alt-book;
     margin-bottom: get-spacer(4);
+  }
+  .hero-left {
+    padding-top: $header-height-control * 2;
+  }
+  .hero-right {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+  }
+  .scroll-wrapper {
+    margin-top: get-spacer(5) * 2;
+    i {
+      display: block;
+    }
   }
 }
 
@@ -264,6 +281,16 @@ a.btn {
   }
 }
 
+$logos-height-control: 840px;
+@keyframes logos {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 /*
   Media queries
   */
@@ -290,7 +317,24 @@ a.btn {
 }
 @media #{$md-down} {}
 @media #{$lg-down} {}
-@media #{$sm-up} {}
+@media #{$sm-up} {
+  .logo-grid {
+    @include position(absolute, 0 null null 0);
+    background-image: url(/img/logo-group.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    will-change: transform;
+    height: 3591px;
+    width: 100%;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 120s;
+    animation-name: logos;
+  }
+}
 @media #{$md-up} {}
 @media #{$lg-up} {}
 @media #{$xl-up} {}
